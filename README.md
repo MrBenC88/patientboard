@@ -59,9 +59,9 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
 ```
 create table patients (
   id uuid primary key default gen_random_uuid(),
-  first_name text,
-  middle_name text,
-  last_name text,
+  firstname text,
+  middlename text,
+  lastname text,
   dob text,
   status text,
   address text
