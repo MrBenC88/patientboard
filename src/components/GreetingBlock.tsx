@@ -14,7 +14,7 @@ const GreetingBlock = ({ greeting }: { greeting: string }) => {
       >
         <div className="space-y-2">
           <h1 className="text-4xl">{greeting}👋</h1>
-          <div className="inline-flex items-center rounded-full border bg-white px-4 py-1 text-sm text-gray-600 shadow-inner">
+        <div className="inline-flex items-center rounded-full border bg-white px-4 py-1 text-sm text-gray-600 shadow-inner">
             {formatDateTime()}
           </div>
         </div>
