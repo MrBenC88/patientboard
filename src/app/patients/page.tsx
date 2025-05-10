@@ -1,9 +1,16 @@
-export const PatientPage = () => {
+"use client";
+
+import DashboardLayout from "@/components/DashboardLayout";
+import PatientTable from "@/components/PatientTable";
+
+const PatientPage = () => {
   return (
-    <div>
-      <h1>Patients</h1>
-      <p>List of patients will be displayed here.</p>
-    </div>
+    <DashboardLayout>
+      <main className="p-6 space-y-6">
+        <h1 className="text-lg font-bold">Patients List</h1>
+        <PatientTable />
+      </main>
+    </DashboardLayout>
   );
 };
 

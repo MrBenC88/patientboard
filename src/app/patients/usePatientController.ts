@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import { supabasePatientRepository } from "@/lib/repositories/supabase-patient-repository";
 import { Patient } from "@/lib/schemas/patient";

@@ -1,9 +1,13 @@
+"use client";
+
+import DashboardLayout from "@/components/DashboardLayout";
+import PatientForm from "@/components/PatientForm";
+
 export const NewPatientFormPage = () => {
   return (
-    <div>
-      <h1>New Patient Form Page</h1>
-      <p>Form.</p>
-    </div>
+    <DashboardLayout>
+      <PatientForm />
+    </DashboardLayout>
   );
 };
 
