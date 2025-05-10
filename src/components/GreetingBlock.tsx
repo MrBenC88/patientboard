@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { HomeIcon, SettingsIcon } from "lucide-react";
 import { formatDateTime } from "@/shared/utils";
 import { motion } from "framer-motion";
+import HeaderButton from "./HeaderButton";
 
 const GreetingBlock = ({ greeting }: { greeting: string }) => {
   return (
@@ -13,29 +13,15 @@ const GreetingBlock = ({ greeting }: { greeting: string }) => {
         className="flex items-center justify-between"
       >
         <div className="space-y-2">
-          <h1 className="text-4xl font-bold text-gray-800">{greeting}👋</h1>
-          <div className="inline-flex items-center gap-2 rounded-full border bg-white px-4 py-1 text-xs text-gray-600 shadow-inner">
+          <h1 className="text-4xl">{greeting}👋</h1>
+          <div className="inline-flex items-center rounded-full border bg-white px-4 py-1 text-sm text-gray-600 shadow-inner">
             {formatDateTime()}
           </div>
         </div>
 
         <div className="flex items-center gap-2">
-          <Link href="/">
-            <button
-              aria-label="Back to home"
-              className="rounded-full border bg-white p-2 hover:bg-gray-100 transition"
-            >
-              <HomeIcon className="w-5 h-5 text-gray-600" />
-            </button>
-          </Link>
-          <Link href="/">
-            <button
-              aria-label="Back to home"
-              className="rounded-full border bg-white p-2 hover:bg-gray-100 transition"
-            >
-              <SettingsIcon className="w-5 h-5 text-gray-600" />
-            </button>
-          </Link>
+          <HeaderButton href="/" icon={HomeIcon} label="Back to home" />
+          <HeaderButton href="/" icon={SettingsIcon} label="Settings" />
         </div>
       </motion.div>
     </div>

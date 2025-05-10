@@ -1,3 +1,60 @@
+# Simple Patient Dash
+Patient management dash built using Next, ShadCN, Supabase, Zod
+
+## 🚀 Features
+
+- Add new patient records
+- View all patients in a responsive table
+- Filter patients by status
+- Click on a row to view full patient details in a modal
+- Reusable form components with validation
+- Toast notifications 
+- Fully responsive UI with Tailwind & ShadCN
+
+## 🧠 Assumptions
+
+- Each patient has:
+  - First, middle (optional), last name
+  - Date of birth
+  - Status (`Inquiry`, `Onboarding`, `Active`, `Churned`)
+  - Address
+- "View data" means table + modal, not full CRUD
+- No auth/user management included
+- Supabase used as a drop-in DB 
+- Repository pattern allows future DB swaps
+- Modal is preferred over page route for quick patient views
+
+
+## Quick Setup
+
+1. Create an .env.local
+```
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
+```
+
+2. Spin up a supabase db 
+
+3. Create patient table in supabase
+```
+create table patients (
+  id uuid primary key default gen_random_uuid(),
+  first_name text,
+  middle_name text,
+  last_name text,
+  dob text,
+  status text,
+  address text
+);
+```
+
+4. Run the app
+```
+npm install
+npm run dev
+```
+--
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
