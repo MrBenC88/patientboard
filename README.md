@@ -24,6 +24,17 @@ Patient management dash built using Next, ShadCN, Supabase, Zod
 - Repository pattern allows future DB swaps
 - Modal is preferred over page route for quick patient views
 
+<details>
+<summary>Screenshots</summary>
+![image](https://github.com/user-attachments/assets/9d7b0a0b-2ff0-483e-8134-ce5eefcbb6d8)
+![image](https://github.com/user-attachments/assets/f68dfaa3-e139-4cea-9a47-22f0b8f5dbe1)
+![image](https://github.com/user-attachments/assets/40c367f6-9892-491e-8690-94f7e7ab80af)
+![image](https://github.com/user-attachments/assets/b879b281-9109-4bd4-b97d-38963ad1d2e9)
+
+
+
+</details>
+
 
 ## Quick Setup
 
