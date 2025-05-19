@@ -40,6 +40,7 @@ const PatientDetailModal = ({
             <p>
               <strong>Address:</strong> {patient.address}
             </p>
+            {/* add edit buton, toggles view and edit mode */}
           </DialogDescription>
         </DialogHeader>
       </DialogContent>

@@ -27,4 +27,19 @@ export const supabasePatientRepository: PatientRepository = {
       address: p.address,
     }));
   },
+
+  async updatePatient(patient) {
+    const { error } = await supabase
+      .from("patients")
+      .update({
+        firstname: patient.firstName,
+        middlename: patient.middleName ?? null,
+        lastname: patient.lastName,
+        dob: patient.dob,
+        status: patient.status,
+        address: patient.address,
+      })
+      .eq("id", patient.id);
+    if (error) throw error;
+  },
 };
